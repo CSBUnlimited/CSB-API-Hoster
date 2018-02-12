@@ -42,6 +42,8 @@ namespace CSB_API_Hoster
                         Conn.Execute(query);
 
                         new UserRepository().AddNewUser(new UserVM() { FirstName = "Chathuranga", LastName = "Basnayake", Gender = "M", Mobile = "077xxxxxxx" });
+
+                        Console.WriteLine("Users Table created and seeded.");
                     }
                     catch (Exception ex)
                     {
@@ -50,6 +52,11 @@ namespace CSB_API_Hoster
                         Console.WriteLine(ex.ToString());
                         File.Delete(_dbFileName);
                         return false;
+                    }
+                    finally
+                    {
+                        if (Conn.State == ConnectionState.Open)
+                            Conn.Close();
                     }
                 }
 
