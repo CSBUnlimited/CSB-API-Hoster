@@ -30,13 +30,13 @@ namespace CSB_API_Hoster
                     Console.WriteLine("Only accept and return - application/json.\n");
                     Console.WriteLine("Example POST Request :\n" +
                         " { \n" +
-                        "\t\"userVM\": [ { \"id\":0,\"firstName\":\"Chathuranga\",\"lastName\":\"Basnayake\",\"gender\":\"M\",\"mobile\":\"077xxxxxxx\" } ],\n" +
+                        "\t\"userVM\": { \"id\":0,\"firstName\":\"Chathuranga\",\"lastName\":\"Basnayake\",\"gender\":\"M\",\"mobile\":\"077xxxxxxx\" } \n" +
                         " }");
                     Console.WriteLine("Example Response :\n" +
                         " { \n" +
                         "\t\"userVM\": [ { \"id\":1,\"firstName\":\"Chathuranga\",\"lastName\":\"Basnayake\",\"gender\":\"M\",\"mobile\":\"077xxxxxxx\" } ],\n" +
                         "\t\"isSuccess\": true,\n" +
-                        "\t\"status\": 200,\n" +
+                        "\t\"status\": 200\n" +
                         " }");
                     Console.WriteLine("-----------------------------------------------\n");
                     do
